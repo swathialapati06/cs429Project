@@ -66,7 +66,7 @@ Feature Engineering Module:
 Similarly, the feature engineering module performs its tasks automatically as part of the data processing pipeline. Users may interact with scripts or commands to execute feature extraction tasks if necessary.
 Flask Application:
 The Flask application is launched using standard commands for running Python web applications. Users typically start the Flask server using commands like flask run or python app.py from the command line.
-# Inputs:
+Inputs:
 Users interact with the system primarily through the Flask-based web application, providing inputs via the user interface:
 Query Text Field:
 Users input their query, typically a search term or phrase, into a text field provided by the Flask application. This query is used to find similar news articles.
