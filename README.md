@@ -44,6 +44,7 @@ Finally, the Flask application provides the user interface for querying similar 
 ## Architecture Diagram
 
 ![Architecture Design](screenshots/architecture.png)
+
 The diagram illustrates the flow of data and interaction between the various components of the system. The web crawler collects data from The New York Times website and passes it to the preprocessing module, where text data undergoes cleaning and standardization. The preprocessed data is then fed into the feature engineering module, which generates TF-IDF matrices and Word2Vec embeddings. These features, along with the original data and storage components, are utilized by the Flask application to provide users with personalized article recommendations based on their queries.
 
 ## Operation
