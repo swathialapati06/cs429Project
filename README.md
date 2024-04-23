@@ -7,14 +7,14 @@ The project involves several important parts working together to make a reliable
 ## Design
 The design of the news article search and recommendation system is meticulously crafted to ensure its effectiveness, efficiency, and scalability. It encompasses several key components, each playing a crucial role in the overall functioning of the system:
 ### 1.Web Crawler:
-The web crawler is the foundational component of the system, responsible for systematically collecting data from The New York Times website.
-Engineered using Scrapy, a powerful web crawling and scraping framework, the crawler navigates through the website's pages to gather both headline snippets and complete articles.
-It adheres to ethical scraping practices and respects the website's robots.txt file to ensure legal and ethical data collection.
+- The web crawler is the foundational component of the system, responsible for systematically collecting data from The New York Times website.
+- Engineered using Scrapy, a powerful web crawling and scraping framework, the crawler navigates through the website's pages to gather both headline snippets and complete articles.
+- It adheres to ethical scraping practices and respects the website's robots.txt file to ensure legal and ethical data collection.
 ### 2.Preprocessing Pipeline:
-Following data acquisition, the collected text undergoes a meticulous preprocessing pipeline to enhance its quality and prepare it for further analysis.
-Techniques such as tokenization, where text is divided into smaller units like words or phrases, are applied to break down the text into manageable components.
-Stopword elimination involves removing common words (e.g., "the", "is", "and") that do not carry significant meaning, thereby reducing noise in the data.
-Stemming, a process of reducing words to their root form (e.g., "running" to "run"), helps in standardizing text representations and improving analysis accuracy.
+- Following data acquisition, the collected text undergoes a meticulous preprocessing pipeline to enhance its quality and prepare it for further analysis.
+- Techniques such as tokenization, where text is divided into smaller units like words or phrases, are applied to break down the text into manageable components.
+- Stopword elimination involves removing common words (e.g., "the", "is", "and") that do not carry significant meaning, thereby reducing noise in the data.
+- Stemming, a process of reducing words to their root form (e.g., "running" to "run"), helps in standardizing text representations and improving analysis accuracy.
 ### 3.Feature Engineering:
 Feature engineering is a critical phase where meaningful features are extracted from the preprocessed text data to facilitate effective similarity calculations.
 Two distinct methodologies, TF-IDF and Word2Vec, are employed to capture different aspects of the textual information.
