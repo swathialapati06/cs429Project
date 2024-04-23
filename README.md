@@ -94,6 +94,15 @@ The implementation of both TF-IDF and Word2Vec methodologies within the news art
 - Despite the differences in performance, both TF-IDF and Word2Vec implementations have yielded improvements in the quality of search results and article recommendations.
 - TF-IDF-based similarity calculations have provided reliable and relevant recommendations, albeit with faster processing times.
 - Word2Vec embeddings have enhanced the system's capability to capture semantic relationships between words and phrases, leading to more nuanced and contextually accurate recommendations.
+- **UI:**
+  ![user input](screenshots/user_input.png)
+  
+- **Tf-Idf Result:**
+  ![Tf-Idf Result](screenshots/tfidf-result.png)
+
+- **Word2Vec Result:**
+  ![Word2Vec Result](screenshots/word2vec-result.png)
+  
 ### Caveats/Cautions:
 - It is important to acknowledge the trade-offs between efficiency and effectiveness when choosing between TF-IDF and Word2Vec methodologies. While TF-IDF offers faster processing times, Word2Vec provides richer semantic representations at the cost of increased computational overhead.
 - Users should be informed about the potential delay in app loading and response times associated with Word2Vec implementation, allowing for appropriate expectations and understanding of system behavior.
