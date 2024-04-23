@@ -111,7 +111,9 @@ In conclusion, the adoption of both TF-IDF and Word2Vec methodologies enriches t
 ## References :
 - https://www.researchgate.net/publication/326425709_Text_Mining_Use_of_TF-IDF_to_Examine_the_Relevance_of_Words_to_Documents
 - https://www.researchgate.net/publication/336203802_Word2Vec_Model_Analysis_for_Semantic_Similarities_in_English_Words
+- https://radimrehurek.com/gensim/auto_examples/tutorials/run_word2vec.html
 - https://www.geeksforgeeks.org/cosine-similarity/
+- https://www.geeksforgeeks.org/flask-tutorial/
 - https://docs.scrapy.org/en/latest/topics/spiders.html
 
 
