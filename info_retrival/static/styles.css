@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input[type="text"], input[type="number"], button {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+#results {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.result {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.result h2 {
+    margin-top: 0;
+}
