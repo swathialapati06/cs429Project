@@ -30,7 +30,7 @@ Overall, the design of the news article search and recommendation system priorit
 
 
 
-Architecture
+## Architecture
 The architecture of the news article search and recommendation system is designed to facilitate the seamless integration and interaction of its core components: the web crawler, preprocessing module, feature engineering module, Flask application, and storage.
 The web crawler, built using Scrapy, acts as the data acquisition engine, systematically traversing The New York Times website to gather headline snippets and complete articles. It adheres to ethical scraping practices to ensure responsible data collection.
 Once the data is collected, it flows into the preprocessing module, where it undergoes a series of transformations to enhance its quality and prepare it for analysis. Techniques such as tokenization, stopword elimination, and stemming are applied to standardize and refine the text data.
@@ -53,7 +53,7 @@ Architecture Diagram
 
 [The diagram illustrates the flow of data and interaction between the various components of the system. The web crawler collects data from The New York Times website and passes it to the preprocessing module, where text data undergoes cleaning and standardization. The preprocessed data is then fed into the feature engineering module, which generates TF-IDF matrices and Word2Vec embeddings. These features, along with the original data and storage components, are utilized by the Flask application to provide users with personalized article recommendations based on their queries.]
 
-Operation
+## Operation
 The operation of the news article search and recommendation system encompasses various aspects, including software commands, user inputs, and installation procedures.
 Software Commands:
 The system is primarily driven by user interactions through the Flask-based web application. However, there are certain commands and procedures involved in the operation of individual components:
@@ -91,7 +91,7 @@ Start the Flask server by running the application script (app.py or equivalent) 
 In this python app_word2vec.py for word2vec embeddings and app_tfidf.py  for TF-IDF embeddings.
 By following these installation procedures and executing the necessary commands, users can successfully deploy and operate the news article search and recommendation system.
 
-Conclusion
+## Conclusion
 The implementation of both TF-IDF and Word2Vec methodologies within the news article search and recommendation system has provided valuable insights into their respective strengths and limitations.
 Success/Failure Results:
 Utilizing TF-IDF vectorization has demonstrated notable success in terms of system performance, with quicker app loading times and faster response rates. This efficiency in operation translates to enhanced user experience and responsiveness.
@@ -113,7 +113,8 @@ Source Code
 The source code for the project is available in a GitHub repository. It includes Python scripts for the web crawler, preprocessing, feature engineering, Flask application, and associated documentation. Dependencies are managed using a requirements.txt file and include open-source libraries such as Scrapy, Gensim, and Flask.
 Bibliography
 Reference citations follow the Chicago style (AMS/AIP or ACM/IEEE). Key references include documentation and official websites of libraries and frameworks used in the project, academic papers on TF-IDF and Word2Vec methodologies, and relevant articles on web scraping and natural language processing.
-References :
+
+## References :
 https://www.researchgate.net/publication/326425709_Text_Mining_Use_of_TF-IDF_to_Examine_the_Relevance_of_Words_to_Documents
 https://www.researchgate.net/publication/336203802_Word2Vec_Model_Analysis_for_Semantic_Similarities_in_English_Words
 https://www.geeksforgeeks.org/cosine-similarity/
