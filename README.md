@@ -16,29 +16,29 @@ The design of the news article search and recommendation system is meticulously 
 - Stopword elimination involves removing common words (e.g., "the", "is", "and") that do not carry significant meaning, thereby reducing noise in the data.
 - Stemming, a process of reducing words to their root form (e.g., "running" to "run"), helps in standardizing text representations and improving analysis accuracy.
 ### 3.Feature Engineering:
-Feature engineering is a critical phase where meaningful features are extracted from the preprocessed text data to facilitate effective similarity calculations.
-Two distinct methodologies, TF-IDF and Word2Vec, are employed to capture different aspects of the textual information.
-TF-IDF (Term Frequency-Inverse Document Frequency) assigns weights to words based on their frequency in a document relative to their frequency across all documents, highlighting important terms.
-Word2Vec utilizes neural network-based models to learn distributed representations of words in a continuous vector space, capturing semantic relationships between words.
-These feature extraction techniques are implemented using the Gensim library, known for its robustness and efficiency in handling large text datasets.
+- Feature engineering is a critical phase where meaningful features are extracted from the preprocessed text data to facilitate effective similarity calculations.
+- Two distinct methodologies, TF-IDF and Word2Vec, are employed to capture different aspects of the textual information.
+- TF-IDF (Term Frequency-Inverse Document Frequency) assigns weights to words based on their frequency in a document relative to their frequency across all documents, highlighting important terms.
+- Word2Vec utilizes neural network-based models to learn distributed representations of words in a continuous vector space, capturing semantic relationships between words.
+- These feature extraction techniques are implemented using the Gensim library, known for its robustness and efficiency in handling large text datasets.
 ### 4.Flask Application:
-The Flask application serves as the interactive interface through which users interact with the system.
-It provides a user-friendly platform where users can input their queries and receive relevant news article recommendations.
-The application is designed to be intuitive and responsive, with a clean and visually appealing user interface.
-Behind the scenes, the application leverages the precomputed features (TF-IDF matrices and Word2Vec embeddings) to calculate similarity scores and retrieve top-k recommendations based on user input.
+- The Flask application serves as the interactive interface through which users interact with the system.
+- It provides a user-friendly platform where users can input their queries and receive relevant news article recommendations.
+- The application is designed to be intuitive and responsive, with a clean and visually appealing user interface.
+- Behind the scenes, the application leverages the precomputed features (TF-IDF matrices and Word2Vec embeddings) to calculate similarity scores and retrieve top-k recommendations based on user input.
 Overall, the design of the news article search and recommendation system prioritizes efficiency, accuracy, and user experience. By carefully orchestrating the integration of various components and leveraging advanced techniques in data processing and analysis, the system aims to deliver timely and personalized news article recommendations to its users.
 
 
 
 ## Architecture
 The architecture of the news article search and recommendation system is designed to facilitate the seamless integration and interaction of its core components: the web crawler, preprocessing module, feature engineering module, Flask application, and storage.
-The web crawler, built using Scrapy, acts as the data acquisition engine, systematically traversing The New York Times website to gather headline snippets and complete articles. It adheres to ethical scraping practices to ensure responsible data collection.
-Once the data is collected, it flows into the preprocessing module, where it undergoes a series of transformations to enhance its quality and prepare it for analysis. Techniques such as tokenization, stopword elimination, and stemming are applied to standardize and refine the text data.
-The feature engineering module extracts meaningful features from the preprocessed text using TF-IDF and Word2Vec methodologies implemented with the Gensim library. This phase generates TF-IDF matrices and Word2Vec embeddings, which serve as the basis for similarity calculations.
-The resulting TF-IDF matrices and Word2Vec embeddings, along with the original data, are stored in the storage component. This component includes:
-nytimes_articles.csv: The CSV file containing the raw data collected by the web crawler.
-tfidf_vectorizer.pkl: The pickle file storing the TF-IDF vectorizer used for feature extraction.
-embeddings_wordvec.pkl: The pickle file containing the Word2Vec embeddings generated by the feature engineering module.
+The **web crawler**, built using Scrapy, acts as the data acquisition engine, systematically traversing The New York Times website to gather headline snippets and complete articles. It adheres to ethical scraping practices to ensure responsible data collection.
+Once the data is collected, it flows into the **preprocessing module**, where it undergoes a series of transformations to enhance its quality and prepare it for analysis. Techniques such as tokenization, stopword elimination, and stemming are applied to standardize and refine the text data.
+The **feature engineering module** extracts meaningful features from the preprocessed text using TF-IDF and Word2Vec methodologies implemented with the Gensim library. This phase generates TF-IDF matrices and Word2Vec embeddings, which serve as the basis for similarity calculations.
+The resulting TF-IDF matrices and Word2Vec embeddings, along with the original data, are stored in the **storage component**. This component includes:
+- **nytimes_articles.csv:** The CSV file containing the raw data collected by the web crawler.
+- **tfidf_vectorizer.pkl:** The pickle file storing the **TF-IDF vectorizer** used for feature extraction.
+- **embeddings_vec.pkl:** The pickle file containing the **Word2Vec embeddings** generated by the feature engineering module.
 Finally, the Flask application provides the user interface for querying similar articles. It leverages the precomputed features to calculate similarity scores and retrieve top-k recommendations based on user input.
 
 ## Architecture Diagram
