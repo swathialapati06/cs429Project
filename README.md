@@ -1,10 +1,10 @@
-Abstract
+## Abstract
 The project aims to develop a news article search and recommendation system using natural language processing techniques. Headlines and articles are crawled from The New York Times website using a Scrapy-based crawler. The crawled data is preprocessed, including tokenization, stopword removal, and stemming. Feature engineering is performed using two methods: TF-IDF and Word2Vec implemented with Gensim. The resulting TF-IDF matrix and Word2Vec embeddings are saved for later use. A Flask-based web application is developed to provide a user interface for querying similar articles. The system's objective is to efficiently retrieve and recommend news articles based on user queries.
 
-Overview
+## Overview
 The project involves several important parts working together to make a reliable and effective news article search and recommendation system. First, there's a smart web crawler made with Scrapy. It's like a robot that goes to The New York Times website and collects both short headlines and full articles. After that, there's a careful process to clean up the collected data. We use techniques like splitting the text into smaller parts, removing unimportant words, and simplifying words to make it easier to understand. Then, we focus on finding important words and phrases from the text using methods called TF-IDF and Word2Vec. These fancy terms help us figure out which articles are similar to each other. We use a library called Gensim to help us do this. We end up with some special files that hold all this important information. Finally, there's a special website made with Flask where people can type in what they're looking for, and our system finds and shows them articles they might like based on what they typed.
 
-Design
+## Design
 The design of the news article search and recommendation system is meticulously crafted to ensure its effectiveness, efficiency, and scalability. It encompasses several key components, each playing a crucial role in the overall functioning of the system:
 Web Crawler:
 The web crawler is the foundational component of the system, responsible for systematically collecting data from The New York Times website.
