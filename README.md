@@ -49,70 +49,70 @@ The diagram illustrates the flow of data and interaction between the various com
 
 ## Operation
 The operation of the news article search and recommendation system encompasses various aspects, including software commands, user inputs, and installation procedures.
-Software Commands:
+### Software Commands:
 The system is primarily driven by user interactions through the Flask-based web application. However, there are certain commands and procedures involved in the operation of individual components:
-Web Crawler:
-The web crawler operates autonomously once initiated, systematically collecting data from The New York Times website. It does not require manual intervention or commands during its execution.
-Preprocessing Module:
-The preprocessing module is typically executed as part of the data processing pipeline after data collection by the web crawler. However, if needed, specific commands or scripts may be run to initiate preprocessing tasks.
-Feature Engineering Module:
-Similarly, the feature engineering module performs its tasks automatically as part of the data processing pipeline. Users may interact with scripts or commands to execute feature extraction tasks if necessary.
-Flask Application:
-The Flask application is launched using standard commands for running Python web applications. Users typically start the Flask server using commands like flask run or python app.py from the command line.
-Inputs:
+### 1.Web Crawler:
+- The web crawler operates autonomously once initiated, systematically collecting data from The New York Times website. It does not require manual intervention or commands during its execution.
+### 2.Preprocessing Module:
+- The preprocessing module is typically executed as part of the data processing pipeline after data collection by the web crawler. However, if needed, specific commands or scripts may be run to initiate preprocessing tasks.
+### 3.Feature Engineering Module:
+-Similarly, the feature engineering module performs its tasks automatically as part of the data processing pipeline. Users may interact with scripts or commands to execute feature extraction tasks if necessary.
+### 4.Flask Application:
+-The Flask application is launched using standard commands for running Python web applications. Users typically start the Flask server using commands like flask run or python app.py from the command line.
+## Inputs:
 Users interact with the system primarily through the Flask-based web application, providing inputs via the user interface:
-Query Text Field:
-Users input their query, typically a search term or phrase, into a text field provided by the Flask application. This query is used to find similar news articles.
-K Integer Field:
-Users specify the number of similar results they want to retrieve by entering an integer value in the designated field. This parameter determines the number of top-k recommendations returned by the system.
-Submit Button (Search):
-Upon entering the query and specifying the value of K, users initiate the search process by clicking the submit button labeled "Search". This triggers the system to retrieve and display the top-k similar articles.
-Installation:
+### 1.Query Text Field:
+- Users input their query, typically a search term or phrase, into a text field provided by the Flask application. This query is used to find similar news articles.
+### 2.K Integer Field:
+- Users specify the number of similar results they want to retrieve by entering an integer value in the designated field. This parameter determines the number of top-k recommendations returned by the system.
+### 3.Submit Button (Search):
+- Upon entering the query and specifying the value of K, users initiate the search process by clicking the submit button labeled "Search". This triggers the system to retrieve and display the top-k similar articles.
+## Installation:
 To set up and run the news article search and recommendation system, follow these installation procedures:
-Clone Repository:
-Begin by cloning the project repository from the designated source, ensuring access to the latest version of the codebase.
-Install Dependencies:
-Navigate to the project directory and install the required dependencies using a package manager like pip. Run pip install -r requirements.txt to install all necessary libraries and packages.
-Run Web Crawler:
-Execute the web crawler script to initiate data collection from The New York Times website. Ensure proper configuration and permissions are set before running the crawler.
-To run Scrapy crawler crapy runspider nytimes_spider.py -o nytimes_articles.csv to save the result in 
-Preprocess Data:
-Run the preprocessing scripts to clean and prepare the collected data for feature extraction. Verify that the preprocessing tasks are completed successfully before proceeding.
-Run Feature Engineering:
-Execute the feature engineering scripts to generate TF-IDF matrices and Word2Vec embeddings from the preprocessed text data. Confirm that the feature extraction process is executed without errors.
-Launch Flask Application:
-Start the Flask server by running the application script (app.py or equivalent) using the appropriate command (flask run or python app.py). Access the application via the provided URL to interact with the system through the user interface.
-In this python app_word2vec.py for word2vec embeddings and app_tfidf.py  for TF-IDF embeddings.
+### 1.Clone Repository:
+- Begin by cloning the project repository from the designated source, ensuring access to the latest version of the codebase.
+### 2.Install Dependencies:
+- Navigate to the project directory and install the required dependencies using a package manager like pip. Run **pip install -r requirements.txt** to install all necessary libraries and packages.
+### 3.Run Web Crawler:
+- Execute the web crawler script to initiate data collection from The New York Times website. Ensure proper configuration and permissions are set before running the crawler.
+- To run Scrapy crawler **scrapy runspider nytimes_spider.py -o nytimes_articles.csv** to save the result in csv file
+### 4.Preprocess Data:
+- Run the preprocessing scripts present in the **infor.ipynb** notebook to clean and prepare the collected data for feature extraction. Verify that the preprocessing tasks are completed successfully before proceeding.
+### 5.Run Feature Engineering:
+- Execute the feature engineering scripts present in the **infor.ipynb** to generate TF-IDF matrices and Word2Vec embeddings from the preprocessed text data. Confirm that the feature extraction process is executed without errors.
+### 6.Launch Flask Application:
+- Start the Flask server by running the application script (app.py or equivalent) using the appropriate command (flask run or python app.py). Access the application via the provided URL to interact with the system through the user interface.
+- In this python **app_word2vec.py** for word2vec embeddings and **app_tfidf.py**  for TF-IDF embeddings.
 By following these installation procedures and executing the necessary commands, users can successfully deploy and operate the news article search and recommendation system.
 
 ## Conclusion
 The implementation of both TF-IDF and Word2Vec methodologies within the news article search and recommendation system has provided valuable insights into their respective strengths and limitations.
-Success/Failure Results:
-Utilizing TF-IDF vectorization has demonstrated notable success in terms of system performance, with quicker app loading times and faster response rates. This efficiency in operation translates to enhanced user experience and responsiveness.
-Conversely, employing Word2Vec embeddings has introduced challenges in system performance, particularly in the loading time of the Word2Vec model from the Gensim library. This has resulted in slower app loading and response times compared to TF-IDF vectorization.
-Outputs:
-Despite the differences in performance, both TF-IDF and Word2Vec implementations have yielded improvements in the quality of search results and article recommendations.
-TF-IDF-based similarity calculations have provided reliable and relevant recommendations, albeit with faster processing times.
-Word2Vec embeddings have enhanced the system's capability to capture semantic relationships between words and phrases, leading to more nuanced and contextually accurate recommendations.
-Caveats/Cautions:
-It is important to acknowledge the trade-offs between efficiency and effectiveness when choosing between TF-IDF and Word2Vec methodologies. While TF-IDF offers faster processing times, Word2Vec provides richer semantic representations at the cost of increased computational overhead.
-Users should be informed about the potential delay in app loading and response times associated with Word2Vec implementation, allowing for appropriate expectations and understanding of system behavior.
-Continuous optimization and refinement of system architecture and implementation strategies may mitigate some of the performance challenges encountered, ensuring a balance between responsiveness and accuracy in recommendation outcomes.
+### Success/Failure Results:
+- Utilizing TF-IDF vectorization has demonstrated notable success in terms of system performance, with quicker app loading times and faster response rates. This efficiency in operation translates to enhanced user experience and responsiveness.
+- Conversely, employing Word2Vec embeddings has introduced challenges in system performance, particularly in the loading time of the Word2Vec model from the Gensim library. This has resulted in slower app loading and response times compared to TF-IDF vectorization.
+### Outputs:
+- Despite the differences in performance, both TF-IDF and Word2Vec implementations have yielded improvements in the quality of search results and article recommendations.
+- TF-IDF-based similarity calculations have provided reliable and relevant recommendations, albeit with faster processing times.
+- Word2Vec embeddings have enhanced the system's capability to capture semantic relationships between words and phrases, leading to more nuanced and contextually accurate recommendations.
+### Caveats/Cautions:
+- It is important to acknowledge the trade-offs between efficiency and effectiveness when choosing between TF-IDF and Word2Vec methodologies. While TF-IDF offers faster processing times, Word2Vec provides richer semantic representations at the cost of increased computational overhead.
+- Users should be informed about the potential delay in app loading and response times associated with Word2Vec implementation, allowing for appropriate expectations and understanding of system behavior.
+- Continuous optimization and refinement of system architecture and implementation strategies may mitigate some of the performance challenges encountered, ensuring a balance between responsiveness and accuracy in recommendation outcomes.
 In conclusion, the adoption of both TF-IDF and Word2Vec methodologies enriches the news article search and recommendation system, offering users a spectrum of options tailored to their preferences and requirements. While TF-IDF excels in efficiency, Word2Vec introduces depth and contextuality, contributing to a more comprehensive and nuanced user experience. By considering the trade-offs and leveraging the strengths of each approach, the system aims to deliver personalized and relevant news article recommendations to its users.
-Data Sources
-The data source for this project is The New York Times website. Data is collected using a Scrapy-based web crawler. Access to the website is publicly available.
-Test Cases
-Test cases are implemented using the PyTest framework to ensure functionality and reliability. Test coverage includes unit tests for individual components and integration tests for end-to-end functionality.
-Source Code
-The source code for the project is available in a GitHub repository. It includes Python scripts for the web crawler, preprocessing, feature engineering, Flask application, and associated documentation. Dependencies are managed using a requirements.txt file and include open-source libraries such as Scrapy, Gensim, and Flask.
-Bibliography
-Reference citations follow the Chicago style (AMS/AIP or ACM/IEEE). Key references include documentation and official websites of libraries and frameworks used in the project, academic papers on TF-IDF and Word2Vec methodologies, and relevant articles on web scraping and natural language processing.
+### Data Sources
+- The data source for this project is The New York Times website. Data is collected using a Scrapy-based web crawler. Access to the website is publicly available.
+### Test Cases
+- Test cases are implemented using the PyTest framework to ensure functionality and reliability. Test coverage includes unit tests for individual components and integration tests for end-to-end functionality.
+### Source Code
+- The source code for the project is available in a GitHub repository. It includes Python scripts for the web crawler, preprocessing, feature engineering, Flask application, and associated documentation. Dependencies are managed using a requirements.txt file and include open-source libraries such as Scrapy, Gensim, and Flask.
+### Bibliography
+- Reference citations follow the Chicago style (AMS/AIP or ACM/IEEE). Key references include documentation and official websites of libraries and frameworks used in the project, academic papers on TF-IDF and Word2Vec methodologies, and relevant articles on web scraping and natural language processing.
 
 ## References :
-https://www.researchgate.net/publication/326425709_Text_Mining_Use_of_TF-IDF_to_Examine_the_Relevance_of_Words_to_Documents
-https://www.researchgate.net/publication/336203802_Word2Vec_Model_Analysis_for_Semantic_Similarities_in_English_Words
-https://www.geeksforgeeks.org/cosine-similarity/
-https://docs.scrapy.org/en/latest/topics/spiders.html
+- https://www.researchgate.net/publication/326425709_Text_Mining_Use_of_TF-IDF_to_Examine_the_Relevance_of_Words_to_Documents
+- https://www.researchgate.net/publication/336203802_Word2Vec_Model_Analysis_for_Semantic_Similarities_in_English_Words
+- https://www.geeksforgeeks.org/cosine-similarity/
+- https://docs.scrapy.org/en/latest/topics/spiders.html
 
 
 
